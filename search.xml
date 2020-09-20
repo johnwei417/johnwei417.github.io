@@ -24,6 +24,24 @@ Given nums = [2, 7, 11, 15], target = 9,
       </tags>
   </entry>
   <entry>
+    <title>[Leetcode] 100. Same Tree</title>
+    <url>/2020/09/06/leetcode-100-sameTree/</url>
+    <content><![CDATA[<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p>Given two binary trees, write a function to check if they are the same or not.</p>
+<p>Two binary trees are considered the same if they are structurally identical and the nodes have the same value.</p>
+<h3 id="Example-1"><a href="#Example-1" class="headerlink" title="Example 1"></a>Example 1</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Input:     1         1</span><br><span class="line">          &#x2F; \       &#x2F; \</span><br><span class="line">         2   3     2   3</span><br><span class="line"></span><br><span class="line">        [1,2,3],   [1,2,3]</span><br><span class="line"></span><br><span class="line">Output: true</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="Example-2"><a href="#Example-2" class="headerlink" title="Example 2"></a>Example 2</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Input:     1         1</span><br><span class="line">          &#x2F;           \</span><br><span class="line">         2             2</span><br><span class="line"></span><br><span class="line">        [1,2],     [1,null,2]</span><br><span class="line"></span><br><span class="line">Output: false</span><br></pre></td></tr></table></figure>
+<h3 id="Example-3"><a href="#Example-3" class="headerlink" title="Example 3"></a>Example 3</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Input:     1         1</span><br><span class="line">          &#x2F; \       &#x2F; \</span><br><span class="line">         2   1     1   2</span><br><span class="line"></span><br><span class="line">        [1,2,1],   [1,1,2]</span><br><span class="line"></span><br><span class="line">Output: false</span><br></pre></td></tr></table></figure>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isSameTree</span><span class="params">(TreeNode p, TreeNode q)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(p == <span class="keyword">null</span> &amp;&amp; q == <span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">if</span>(p == <span class="keyword">null</span> || q == <span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> (p.val == q.val) &amp;&amp; isSameTree(p.left, q.left)</span><br><span class="line">        &amp;&amp; isSameTree(p.right, q.right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Algorithm</category>
+        <category>Leetcode</category>
+      </categories>
+      <tags>
+        <tag>Tree</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[Leetcode] 17. Letter Combinations of a Phone Number</title>
     <url>/2020/09/05/17-letter-combinations/</url>
     <content><![CDATA[<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p>Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent.</p>
@@ -59,24 +77,6 @@ Given nums = [2, 7, 11, 15], target = 9,
         <tag>two pointer</tag>
         <tag>string</tag>
         <tag>sliding-window</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[Leetcode] 100. Same Tree</title>
-    <url>/2020/09/06/leetcode-100-sameTree/</url>
-    <content><![CDATA[<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p>Given two binary trees, write a function to check if they are the same or not.</p>
-<p>Two binary trees are considered the same if they are structurally identical and the nodes have the same value.</p>
-<h3 id="Example-1"><a href="#Example-1" class="headerlink" title="Example 1"></a>Example 1</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Input:     1         1</span><br><span class="line">          &#x2F; \       &#x2F; \</span><br><span class="line">         2   3     2   3</span><br><span class="line"></span><br><span class="line">        [1,2,3],   [1,2,3]</span><br><span class="line"></span><br><span class="line">Output: true</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<h3 id="Example-2"><a href="#Example-2" class="headerlink" title="Example 2"></a>Example 2</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Input:     1         1</span><br><span class="line">          &#x2F;           \</span><br><span class="line">         2             2</span><br><span class="line"></span><br><span class="line">        [1,2],     [1,null,2]</span><br><span class="line"></span><br><span class="line">Output: false</span><br></pre></td></tr></table></figure>
-<h3 id="Example-3"><a href="#Example-3" class="headerlink" title="Example 3"></a>Example 3</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Input:     1         1</span><br><span class="line">          &#x2F; \       &#x2F; \</span><br><span class="line">         2   1     1   2</span><br><span class="line"></span><br><span class="line">        [1,2,1],   [1,1,2]</span><br><span class="line"></span><br><span class="line">Output: false</span><br></pre></td></tr></table></figure>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isSameTree</span><span class="params">(TreeNode p, TreeNode q)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(p == <span class="keyword">null</span> &amp;&amp; q == <span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">if</span>(p == <span class="keyword">null</span> || q == <span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> (p.val == q.val) &amp;&amp; isSameTree(p.left, q.left)</span><br><span class="line">        &amp;&amp; isSameTree(p.right, q.right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Algorithm</category>
-        <category>Leetcode</category>
-      </categories>
-      <tags>
-        <tag>Tree</tag>
       </tags>
   </entry>
   <entry>
@@ -298,6 +298,29 @@ cost = [3,4,3]
       </tags>
   </entry>
   <entry>
+    <title>[Leetcode] 139. Word Break</title>
+    <url>/2020/09/20/leetcode-139-word-break/</url>
+    <content><![CDATA[<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p>Given a non-empty string s and a dictionary wordDict containing a list of non-empty words, determine if s can be segmented into a space-separated sequence of one or more dictionary words.</p>
+<h3 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h3><ul>
+<li>The same word in the dictionary may be reused multiple times in the segmentation.</li>
+<li>You may assume the dictionary does not contain duplicate words.</li>
+</ul>
+<h3 id="Example-1"><a href="#Example-1" class="headerlink" title="Example 1"></a>Example 1</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Input: s &#x3D; &quot;leetcode&quot;, wordDict &#x3D; [&quot;leet&quot;, &quot;code&quot;]</span><br><span class="line">Output: true</span><br><span class="line">Explanation: Return true because &quot;leetcode&quot; can be segmented as &quot;leet code&quot;.</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+
+<h3 id="Example-2"><a href="#Example-2" class="headerlink" title="Example 2"></a>Example 2</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Input: s &#x3D; &quot;applepenapple&quot;, wordDict &#x3D; [&quot;apple&quot;, &quot;pen&quot;]</span><br><span class="line">Output: true</span><br><span class="line">Explanation: Return true because &quot;applepenapple&quot; can be segmented as &quot;apple pen apple&quot;.</span><br><span class="line">             Note that you are allowed to reuse a dictionary word.</span><br></pre></td></tr></table></figure>
+<h3 id="Example-3"><a href="#Example-3" class="headerlink" title="Example 3"></a>Example 3</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Input: s &#x3D; &quot;catsandog&quot;, wordDict &#x3D; [&quot;cats&quot;, &quot;dog&quot;, &quot;sand&quot;, &quot;and&quot;, &quot;cat&quot;]</span><br><span class="line">Output: false</span><br></pre></td></tr></table></figure>
+
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">wordBreak</span><span class="params">(String s, List&lt;String&gt; wordDict)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(s == <span class="keyword">null</span> || wordDict == <span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">false</span>; </span><br><span class="line">        HashSet&lt;String&gt; dict =  <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span>(String str: wordDict)&#123;</span><br><span class="line">            dict.add(str);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//state: wb[i] true if substring(0, i) is within the dict </span></span><br><span class="line">        <span class="keyword">boolean</span>[] breakable = <span class="keyword">new</span> <span class="keyword">boolean</span>[s.length() + <span class="number">1</span>];</span><br><span class="line">        <span class="comment">//init</span></span><br><span class="line">        breakable[<span class="number">0</span>] = <span class="keyword">true</span>;</span><br><span class="line">        <span class="comment">//func: wb[i] = true if [0, i - j] is true and [i-j, i] in dict. j(0,i)</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i  = <span class="number">1</span>; i &lt;= s.length(); i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = i; j &gt; <span class="number">0</span>; j--)&#123;</span><br><span class="line">                String sub = s.substring(i-j,i);</span><br><span class="line">                <span class="keyword">if</span>(dict.contains(sub))&#123;</span><br><span class="line">                    <span class="keyword">if</span>(breakable[i-j]== <span class="keyword">true</span>)&#123;</span><br><span class="line">                        breakable[i] = <span class="keyword">true</span>;</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> breakable[s.length()];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Algorithm</category>
+        <category>Leetcode</category>
+      </categories>
+      <tags>
+        <tag>dp</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[Leetcode] 141. Linked List Cycle</title>
     <url>/2020/09/07/leetcode-141-linedlist-cycle/</url>
     <content><![CDATA[<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p>Given a linked list, determine if it has a cycle in it.</p>
@@ -358,6 +381,33 @@ Explanation: There is no cycle in the linked list.</em>
       </tags>
   </entry>
   <entry>
+    <title>[Leetcode] 169. Majority Element</title>
+    <url>/2020/09/07/leetcode-169-majority-element/</url>
+    <content><![CDATA[<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p>Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times.</p>
+<p>You may assume that the array is non-empty and the majority element always exist in the array.</p>
+<h3 id="Example-1"><a href="#Example-1" class="headerlink" title="Example 1"></a>Example 1</h3><em>
+Input: [3,2,3]
+Output: 3
+</em>
+<a id="more"></a>
+
+<h3 id="Example-2"><a href="#Example-2" class="headerlink" title="Example 2"></a>Example 2</h3><em>
+Input: [2,2,1,1,1,2,2]
+Output: 2
+</em>
+
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//Hashtable</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">majorityElement</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        HashMap&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> num: nums)&#123;</span><br><span class="line">            map.put(num, map.getOrDefault(num, <span class="number">0</span>) + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(Integer key: map.keySet())&#123;</span><br><span class="line">            <span class="keyword">if</span>(map.get(key) &gt; (nums.length / <span class="number">2</span>))&#123;</span><br><span class="line">                <span class="keyword">return</span> key;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//Sorting</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">majorityElement</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">    Arrays.sort(nums);</span><br><span class="line">    <span class="keyword">return</span> nums[nums.length/<span class="number">2</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Bit manipulation </span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">majorityElement</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span>[] bit = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">32</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> num: nums)</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="number">32</span>; i++) </span><br><span class="line">            <span class="keyword">if</span> ((num&gt;&gt;(<span class="number">31</span>-i) &amp; <span class="number">1</span>) == <span class="number">1</span>)</span><br><span class="line">                bit[i]++;</span><br><span class="line">    <span class="keyword">int</span> ret=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="number">32</span>; i++) &#123;</span><br><span class="line">        bit[i]=bit[i]&gt;nums.length/<span class="number">2</span>?<span class="number">1</span>:<span class="number">0</span>;</span><br><span class="line">        ret += bit[i]*(<span class="number">1</span>&lt;&lt;(<span class="number">31</span>-i));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Algorithm</category>
+        <category>Leetcode</category>
+      </categories>
+      <tags>
+        <tag>array</tag>
+        <tag>HashMap</tag>
+        <tag>bit-manipulation</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[Leetcode] 151. Reverse Words in a String</title>
     <url>/2020/09/07/leetcode-151-reverse-words/</url>
     <content><![CDATA[<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p>Given an input string, reverse the string word by word.</p>
@@ -386,33 +436,6 @@ Explanation: You need to reduce multiple spaces between two words to a single sp
       </categories>
       <tags>
         <tag>regex</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[Leetcode] 169. Majority Element</title>
-    <url>/2020/09/07/leetcode-169-majority-element/</url>
-    <content><![CDATA[<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p>Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times.</p>
-<p>You may assume that the array is non-empty and the majority element always exist in the array.</p>
-<h3 id="Example-1"><a href="#Example-1" class="headerlink" title="Example 1"></a>Example 1</h3><em>
-Input: [3,2,3]
-Output: 3
-</em>
-<a id="more"></a>
-
-<h3 id="Example-2"><a href="#Example-2" class="headerlink" title="Example 2"></a>Example 2</h3><em>
-Input: [2,2,1,1,1,2,2]
-Output: 2
-</em>
-
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//Hashtable</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">majorityElement</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        HashMap&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> num: nums)&#123;</span><br><span class="line">            map.put(num, map.getOrDefault(num, <span class="number">0</span>) + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(Integer key: map.keySet())&#123;</span><br><span class="line">            <span class="keyword">if</span>(map.get(key) &gt; (nums.length / <span class="number">2</span>))&#123;</span><br><span class="line">                <span class="keyword">return</span> key;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//Sorting</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">majorityElement</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">    Arrays.sort(nums);</span><br><span class="line">    <span class="keyword">return</span> nums[nums.length/<span class="number">2</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Bit manipulation </span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">majorityElement</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span>[] bit = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">32</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> num: nums)</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="number">32</span>; i++) </span><br><span class="line">            <span class="keyword">if</span> ((num&gt;&gt;(<span class="number">31</span>-i) &amp; <span class="number">1</span>) == <span class="number">1</span>)</span><br><span class="line">                bit[i]++;</span><br><span class="line">    <span class="keyword">int</span> ret=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="number">32</span>; i++) &#123;</span><br><span class="line">        bit[i]=bit[i]&gt;nums.length/<span class="number">2</span>?<span class="number">1</span>:<span class="number">0</span>;</span><br><span class="line">        ret += bit[i]*(<span class="number">1</span>&lt;&lt;(<span class="number">31</span>-i));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Algorithm</category>
-        <category>Leetcode</category>
-      </categories>
-      <tags>
-        <tag>array</tag>
-        <tag>HashMap</tag>
-        <tag>bit-manipulation</tag>
       </tags>
   </entry>
   <entry>
@@ -563,36 +586,6 @@ Output: 5->4->3->2->1->NULL
       </tags>
   </entry>
   <entry>
-    <title>[Leetcode] 219. Contains Duplicate II</title>
-    <url>/2020/09/07/leetcode-219-contains-duplicate-2/</url>
-    <content><![CDATA[<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p>Given an array of integers and an integer k, find out whether there are two distinct indices iand j in the array such that nums[i] = nums[j] and the absolute difference between i and jis at most k.</p>
-<h3 id="Example-1"><a href="#Example-1" class="headerlink" title="Example 1"></a>Example 1</h3><em>
-Input: nums = [1,2,3,1], k = 3<br>
-Output: true
-</em>
-<a id="more"></a>
-
-<h3 id="Example-2"><a href="#Example-2" class="headerlink" title="Example 2"></a>Example 2</h3><em>
-Input: nums = [1,0,1,1], k = 1<br>
-Output: true
-</em>
-
-<h3 id="Example-3"><a href="#Example-3" class="headerlink" title="Example 3"></a>Example 3</h3><em>
-Input: nums = [1,2,3,1,2,3], k = 2<br>
-Output: false
-</em>
-
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">containsNearbyDuplicate</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        Set&lt;Integer&gt; record = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i  &lt; nums.length; i ++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(record.contains(nums[i]))&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            record.add(nums[i]);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(record.size() == k + <span class="number">1</span>)&#123;</span><br><span class="line">                record.remove(nums[i-k]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Algorithm</category>
-        <category>Leetcode</category>
-      </categories>
-      <tags>
-        <tag>hashtable</tag>
-        <tag>array</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[Leetcode] 217. Contains Duplicate</title>
     <url>/2020/09/07/leetcode-217-contains-duplicate/</url>
     <content><![CDATA[<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p>Given an array of integers, find if the array contains any duplicates.</p>
@@ -625,18 +618,33 @@ Output: true
       </tags>
   </entry>
   <entry>
-    <title>[Leetcode] 226. Invert Binary Tree</title>
-    <url>/2020/09/07/leetcode-226-invert-binaryTree/</url>
-    <content><![CDATA[<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p>Invert a binary tree.</p>
-<h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Input:</span><br><span class="line"></span><br><span class="line">     4</span><br><span class="line">   &#x2F;   \</span><br><span class="line">  2     7</span><br><span class="line"> &#x2F; \   &#x2F; \</span><br><span class="line">1   3 6   9</span><br><span class="line"></span><br><span class="line">Output:</span><br><span class="line"></span><br><span class="line">     4</span><br><span class="line">   &#x2F;   \</span><br><span class="line">  7     2</span><br><span class="line"> &#x2F; \   &#x2F; \</span><br><span class="line">9   6 3   1</span><br></pre></td></tr></table></figure>
+    <title>[Leetcode] 219. Contains Duplicate II</title>
+    <url>/2020/09/07/leetcode-219-contains-duplicate-2/</url>
+    <content><![CDATA[<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p>Given an array of integers and an integer k, find out whether there are two distinct indices iand j in the array such that nums[i] = nums[j] and the absolute difference between i and jis at most k.</p>
+<h3 id="Example-1"><a href="#Example-1" class="headerlink" title="Example 1"></a>Example 1</h3><em>
+Input: nums = [1,2,3,1], k = 3<br>
+Output: true
+</em>
 <a id="more"></a>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * public class TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode left;</span></span><br><span class="line"><span class="comment"> *     TreeNode right;</span></span><br><span class="line"><span class="comment"> *     TreeNode() &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int val) &#123; this.val = val; &#125;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int val, TreeNode left, TreeNode right) &#123;</span></span><br><span class="line"><span class="comment"> *         this.val = val;</span></span><br><span class="line"><span class="comment"> *         this.left = left;</span></span><br><span class="line"><span class="comment"> *         this.right = right;</span></span><br><span class="line"><span class="comment"> *     &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> TreeNode <span class="title">invertTree</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(root == <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        invertTree(root.left);</span><br><span class="line">        invertTree(root.right);</span><br><span class="line"></span><br><span class="line">        TreeNode temp = root.left;</span><br><span class="line">        root.left = root.right;</span><br><span class="line">        root.right = temp;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//solution 2</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> TreeNode <span class="title">invertTree</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(root == <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        TreeNode tempRight = root.right;</span><br><span class="line">        root.right = invertTree(root.left);</span><br><span class="line">        root.left = invertTree(tempRight);</span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//solution 3: iterative BFS</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> TreeNode <span class="title">invertTree</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (root == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">final</span> Queue&lt;TreeNode&gt; queue = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        queue.offer(root);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(!queue.isEmpty()) &#123;</span><br><span class="line">            <span class="keyword">final</span> TreeNode node = queue.poll();</span><br><span class="line">            <span class="keyword">final</span> TreeNode left = node.left;</span><br><span class="line">            node.left = node.right;</span><br><span class="line">            node.right = left;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(node.left != <span class="keyword">null</span>) &#123;</span><br><span class="line">                queue.offer(node.left);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(node.right != <span class="keyword">null</span>) &#123;</span><br><span class="line">                queue.offer(node.right);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+
+<h3 id="Example-2"><a href="#Example-2" class="headerlink" title="Example 2"></a>Example 2</h3><em>
+Input: nums = [1,0,1,1], k = 1<br>
+Output: true
+</em>
+
+<h3 id="Example-3"><a href="#Example-3" class="headerlink" title="Example 3"></a>Example 3</h3><em>
+Input: nums = [1,2,3,1,2,3], k = 2<br>
+Output: false
+</em>
+
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">containsNearbyDuplicate</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        Set&lt;Integer&gt; record = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i  &lt; nums.length; i ++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(record.contains(nums[i]))&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            record.add(nums[i]);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(record.size() == k + <span class="number">1</span>)&#123;</span><br><span class="line">                record.remove(nums[i-k]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>Algorithm</category>
         <category>Leetcode</category>
       </categories>
       <tags>
-        <tag>Tree</tag>
+        <tag>hashtable</tag>
+        <tag>array</tag>
       </tags>
   </entry>
   <entry>
@@ -667,6 +675,21 @@ Output: false
       <tags>
         <tag>Tree</tag>
         <tag>Sort</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[Leetcode] 226. Invert Binary Tree</title>
+    <url>/2020/09/07/leetcode-226-invert-binaryTree/</url>
+    <content><![CDATA[<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p>Invert a binary tree.</p>
+<h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Input:</span><br><span class="line"></span><br><span class="line">     4</span><br><span class="line">   &#x2F;   \</span><br><span class="line">  2     7</span><br><span class="line"> &#x2F; \   &#x2F; \</span><br><span class="line">1   3 6   9</span><br><span class="line"></span><br><span class="line">Output:</span><br><span class="line"></span><br><span class="line">     4</span><br><span class="line">   &#x2F;   \</span><br><span class="line">  7     2</span><br><span class="line"> &#x2F; \   &#x2F; \</span><br><span class="line">9   6 3   1</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * public class TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode left;</span></span><br><span class="line"><span class="comment"> *     TreeNode right;</span></span><br><span class="line"><span class="comment"> *     TreeNode() &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int val) &#123; this.val = val; &#125;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int val, TreeNode left, TreeNode right) &#123;</span></span><br><span class="line"><span class="comment"> *         this.val = val;</span></span><br><span class="line"><span class="comment"> *         this.left = left;</span></span><br><span class="line"><span class="comment"> *         this.right = right;</span></span><br><span class="line"><span class="comment"> *     &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> TreeNode <span class="title">invertTree</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(root == <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        invertTree(root.left);</span><br><span class="line">        invertTree(root.right);</span><br><span class="line"></span><br><span class="line">        TreeNode temp = root.left;</span><br><span class="line">        root.left = root.right;</span><br><span class="line">        root.right = temp;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//solution 2</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> TreeNode <span class="title">invertTree</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(root == <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        TreeNode tempRight = root.right;</span><br><span class="line">        root.right = invertTree(root.left);</span><br><span class="line">        root.left = invertTree(tempRight);</span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//solution 3: iterative BFS</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> TreeNode <span class="title">invertTree</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (root == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">final</span> Queue&lt;TreeNode&gt; queue = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        queue.offer(root);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(!queue.isEmpty()) &#123;</span><br><span class="line">            <span class="keyword">final</span> TreeNode node = queue.poll();</span><br><span class="line">            <span class="keyword">final</span> TreeNode left = node.left;</span><br><span class="line">            node.left = node.right;</span><br><span class="line">            node.right = left;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(node.left != <span class="keyword">null</span>) &#123;</span><br><span class="line">                queue.offer(node.left);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(node.right != <span class="keyword">null</span>) &#123;</span><br><span class="line">                queue.offer(node.right);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Algorithm</category>
+        <category>Leetcode</category>
+      </categories>
+      <tags>
+        <tag>Tree</tag>
       </tags>
   </entry>
   <entry>
@@ -1161,6 +1184,33 @@ return 2.<br>
       </tags>
   </entry>
   <entry>
+    <title>[Leetcode] 46. Permutations</title>
+    <url>/2020/09/06/leetcode-46-permutations/</url>
+    <content><![CDATA[<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p>Given a collection of distinct integers, return all possible permutations.</p>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><em>
+Input: [1,2,3] <br />
+Output:
+[
+  [1,2,3],
+  [1,3,2],
+  [2,1,3],
+  [2,3,1],
+  [3,1,2],
+  [3,2,1]
+]
+</em>
+
+<a id="more"></a>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; permute(<span class="keyword">int</span>[] nums) &#123;</span><br><span class="line">        List&lt;List&lt;Integer&gt;&gt; res = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        backtrack(res, <span class="keyword">new</span> ArrayList&lt;&gt;(), nums);</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">backtrack</span><span class="params">(List&lt;List&lt;Integer&gt;&gt; res, List&lt;Integer&gt; track, <span class="keyword">int</span>[] nums)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(track.size() == nums.length)&#123;</span><br><span class="line">            res.add(<span class="keyword">new</span> ArrayList&lt;&gt;(track));</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i ++)&#123;</span><br><span class="line">            <span class="comment">//skip option if element already exist in the track</span></span><br><span class="line">            <span class="keyword">if</span>(track.contains(nums[i])) <span class="keyword">continue</span>;</span><br><span class="line">            <span class="comment">//choose </span></span><br><span class="line">            track.add(nums[i]);</span><br><span class="line"></span><br><span class="line">            <span class="comment">//explore</span></span><br><span class="line">            backtrack(res, track, nums);</span><br><span class="line"></span><br><span class="line">            <span class="comment">//unchoose</span></span><br><span class="line">            <span class="comment">// tempList.remove(tempList.size() - 1);</span></span><br><span class="line">            <span class="comment">// This ststement is used to remove the element whose all the subsets has been found.</span></span><br><span class="line">            <span class="comment">// Consider an example</span></span><br><span class="line">            <span class="comment">// Array -&gt; &#123;1,2,3&#125;</span></span><br><span class="line">            <span class="comment">// when we start from 1st element i.e index 0</span></span><br><span class="line">            <span class="comment">// we add all the subsets of 1 by calling backtrack( list, track, nums);</span></span><br><span class="line">            <span class="comment">// When it backtacks after adding all subsets of 1 the tempList Contains 1.</span></span><br><span class="line">            <span class="comment">// Now we need to remove it from list.</span></span><br><span class="line">            <span class="comment">// And get all the subsets of next element. (Observe all the subsets containg the currnt element and previous element have been added already.</span></span><br><span class="line">            track.remove(track.size() - <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Algorithm</category>
+        <category>Leetcode</category>
+      </categories>
+      <tags>
+        <tag>backtracking</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[Leetcode] 40. Combination Sum II</title>
     <url>/2020/09/18/leetcode-40-combination-sum-2/</url>
     <content><![CDATA[<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p>Given a collection of candidate numbers (candidates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.</p>
@@ -1213,33 +1263,6 @@ Your algorithm should run in O(n) time and uses constant extra space.
       </tags>
   </entry>
   <entry>
-    <title>[Leetcode] 46. Permutations</title>
-    <url>/2020/09/06/leetcode-46-permutations/</url>
-    <content><![CDATA[<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p>Given a collection of distinct integers, return all possible permutations.</p>
-<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><em>
-Input: [1,2,3] <br />
-Output:
-[
-  [1,2,3],
-  [1,3,2],
-  [2,1,3],
-  [2,3,1],
-  [3,1,2],
-  [3,2,1]
-]
-</em>
-
-<a id="more"></a>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; permute(<span class="keyword">int</span>[] nums) &#123;</span><br><span class="line">        List&lt;List&lt;Integer&gt;&gt; res = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        backtrack(res, <span class="keyword">new</span> ArrayList&lt;&gt;(), nums);</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">backtrack</span><span class="params">(List&lt;List&lt;Integer&gt;&gt; res, List&lt;Integer&gt; track, <span class="keyword">int</span>[] nums)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(track.size() == nums.length)&#123;</span><br><span class="line">            res.add(<span class="keyword">new</span> ArrayList&lt;&gt;(track));</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i ++)&#123;</span><br><span class="line">            <span class="comment">//skip option if element already exist in the track</span></span><br><span class="line">            <span class="keyword">if</span>(track.contains(nums[i])) <span class="keyword">continue</span>;</span><br><span class="line">            <span class="comment">//choose </span></span><br><span class="line">            track.add(nums[i]);</span><br><span class="line"></span><br><span class="line">            <span class="comment">//explore</span></span><br><span class="line">            backtrack(res, track, nums);</span><br><span class="line"></span><br><span class="line">            <span class="comment">//unchoose</span></span><br><span class="line">            <span class="comment">// tempList.remove(tempList.size() - 1);</span></span><br><span class="line">            <span class="comment">// This ststement is used to remove the element whose all the subsets has been found.</span></span><br><span class="line">            <span class="comment">// Consider an example</span></span><br><span class="line">            <span class="comment">// Array -&gt; &#123;1,2,3&#125;</span></span><br><span class="line">            <span class="comment">// when we start from 1st element i.e index 0</span></span><br><span class="line">            <span class="comment">// we add all the subsets of 1 by calling backtrack( list, track, nums);</span></span><br><span class="line">            <span class="comment">// When it backtacks after adding all subsets of 1 the tempList Contains 1.</span></span><br><span class="line">            <span class="comment">// Now we need to remove it from list.</span></span><br><span class="line">            <span class="comment">// And get all the subsets of next element. (Observe all the subsets containg the currnt element and previous element have been added already.</span></span><br><span class="line">            track.remove(track.size() - <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Algorithm</category>
-        <category>Leetcode</category>
-      </categories>
-      <tags>
-        <tag>backtracking</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[Leetcode] 47. Permutations II</title>
     <url>/2020/09/06/leetcode-47-permutations-2/</url>
     <content><![CDATA[<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p>Given a collection of numbers that might contain duplicates, return all possible unique permutations.</p>
@@ -1257,6 +1280,53 @@ Output:
 <h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; permuteUnique(<span class="keyword">int</span>[] nums) &#123;</span><br><span class="line">        List&lt;List&lt;Integer&gt;&gt; res = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        Arrays.sort(nums);</span><br><span class="line">        backtrack(res, <span class="keyword">new</span> ArrayList&lt;&gt;(), nums, <span class="keyword">new</span> <span class="keyword">boolean</span>[nums.length]);</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">backtrack</span><span class="params">(List&lt;List&lt;Integer&gt;&gt; res, List&lt;Integer&gt; track, <span class="keyword">int</span>[] nums, <span class="keyword">boolean</span>[] visited)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(track.size() == nums.length)&#123;</span><br><span class="line">            res.add(<span class="keyword">new</span> ArrayList&lt;&gt;(track));</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++)&#123;</span><br><span class="line">            <span class="comment">//explaination is below</span></span><br><span class="line">             <span class="keyword">if</span> (visited[i] || (i &gt; <span class="number">0</span> &amp;&amp; !visited[i-<span class="number">1</span>] &amp;&amp; nums[i] == nums[i-<span class="number">1</span>]))&#123;</span><br><span class="line">                 <span class="keyword">continue</span>;</span><br><span class="line">             &#125;</span><br><span class="line">            visited[i] = <span class="keyword">true</span>;</span><br><span class="line">            track.add(nums[i]);</span><br><span class="line">            backtrack(res, track, nums, visited);</span><br><span class="line">            track.remove(track.size() - <span class="number">1</span>);</span><br><span class="line">            visited[i] = <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><img src="/images/permutation2-1.png"><br><img src="/images/permutation2-2.png"></p>
 ]]></content>
+      <categories>
+        <category>Algorithm</category>
+        <category>Leetcode</category>
+      </categories>
+      <tags>
+        <tag>backtracking</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[Leetcode] 55. Jump game</title>
+    <url>/2020/09/06/leetcode-55-jump-game/</url>
+    <content><![CDATA[<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p>Given an array of non-negative integers, you are initially positioned at the first index of the array.</p>
+<p>Each element in the array represents your maximum jump length at that position.</p>
+<p>Determine if you are able to reach the last index.</p>
+<h2 id="Example-1"><a href="#Example-1" class="headerlink" title="Example 1"></a>Example 1</h2><em>
+Input: nums = [2,3,1,1,4]
+Output: true
+Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.
+</em>
+<a id="more"></a>
+
+<h2 id="Example-2"><a href="#Example-2" class="headerlink" title="Example 2"></a>Example 2</h2><em>
+Input: nums = [3,2,1,0,4]
+Output: false
+Explanation: You will always arrive at index 3 no matter what. Its maximum jump length is 0, which makes it impossible to reach the last index.</em>
+
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * DP solution</span></span><br><span class="line"><span class="comment"> * with O(n^2) time complexity</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">canJump</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">      <span class="comment">//dp solution</span></span><br><span class="line">      <span class="keyword">int</span> n = nums.length;</span><br><span class="line">      <span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[n];</span><br><span class="line">      <span class="comment">//search from back of list;</span></span><br><span class="line">      <span class="comment">// use 0 represent the non-reachable and 1 represent reachable</span></span><br><span class="line">      <span class="comment">//2 3 1 1 4</span></span><br><span class="line">      <span class="comment">//0 0 0 0 1 # at begining</span></span><br><span class="line">      <span class="comment">//0 0 0 1 1 # 2nd dp[3 + 1] == 1 then change dp[3] to 1</span></span><br><span class="line">      <span class="comment">//0 0 1 1 1 # 3rd dp[2 + 1] = dp[3] == 1 then change dp[2] to 1;</span></span><br><span class="line">      <span class="comment">//0 1 1 1 1 # 4th dp[1 + 1] = dp[2] == 1 then change dp[1] to 1;</span></span><br><span class="line">      <span class="comment">//1 1 1 1 1 # 5th dp[0 + 1] = dp[1] == 1 then change dp[0] to 1;</span></span><br><span class="line">      <span class="comment">//so index 0 is able to reach the last index;</span></span><br><span class="line">      </span><br><span class="line">      <span class="comment">//case 2;</span></span><br><span class="line">      <span class="comment">//3 2 1 0 4</span></span><br><span class="line">      <span class="comment">//0 0 0 0 1 # at begining </span></span><br><span class="line">      <span class="comment">//0 0 0 0 1 # 2nd dp[3 + 0 (nums[3])] = 0, dp[3] = 0;</span></span><br><span class="line">      <span class="comment">//dp[2 + 1(nums[2])] = dp[3] = 0; dp[2] = 0;</span></span><br><span class="line">      <span class="comment">//dp[1 + 1] or dp[1 + 2] both equal to 0, so dp[1] = 0;</span></span><br><span class="line">      <span class="comment">//dp[0 + 1], dp[0 + 2] and dp[0 + 3] all equal to 0, so dp[0] = 0</span></span><br><span class="line">      <span class="comment">//which means in this example, cannot jump to last if we jump from index 0</span></span><br><span class="line">      <span class="comment">//initially</span></span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> i = n - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--)&#123;</span><br><span class="line">          dp[i] = (i == n-<span class="number">1</span>)? <span class="number">1</span>:<span class="number">0</span>;</span><br><span class="line">          <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= nums[i] &amp;&amp; i + j &lt; n; j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(dp[i + j] == <span class="number">1</span>)&#123;</span><br><span class="line">                dp[i] = <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">          <span class="keyword">return</span> dp[<span class="number">0</span>] == <span class="number">1</span>? <span class="keyword">true</span> : <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Greedy Solution</span></span><br><span class="line"><span class="comment"> * */</span></span><br><span class="line"> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">canJump</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//greedy solution</span></span><br><span class="line">        <span class="keyword">int</span> furthest = <span class="number">0</span>; </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(furthest &lt; i)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//find furthest position they can reach for each positions</span></span><br><span class="line">            furthest = Math.max(furthest, i + nums[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//Backtracking Solution</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">canJump</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//backtracking solution</span></span><br><span class="line">        <span class="keyword">return</span> canJumpFromPosition(<span class="number">0</span>, nums);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">canJumpFromPosition</span><span class="params">(<span class="keyword">int</span> position, <span class="keyword">int</span>[]nums)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(position == nums.length - <span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> furthestPosition = Math.min(nums.length - <span class="number">1</span>, position + nums[position]);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> nextPosition = position + <span class="number">1</span>; nextPosition &lt;= furthestPosition; nextPosition++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(canJumpFromPosition(nextPosition, nums))&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Algorithm</category>
+        <category>Leetcode</category>
+      </categories>
+      <tags>
+        <tag>backtracking</tag>
+        <tag>dp</tag>
+        <tag>greedy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[Leetcode] 78. Subsets</title>
+    <url>/2020/09/06/leetcode-78-subsets/</url>
+    <content><![CDATA[<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p>Given a set of distinct integers, nums, return all possible subsets (the power set).</p>
+<p>Note: The solution set must not contain duplicate subsets.</p>
+<h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><p><em>Input: nums = [1,2,3]<br>Output:<br>[<br>  [3],<br>  [1],<br>  [2],<br>  [1,2,3],<br>  [1,3],<br>  [2,3],<br>  [1,2],<br>  []<br>]</em></p>
+<a id="more"></a>
+
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p><img src="/images/subsets.png"></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment">Backtracking can be solved always as follows:</span></span><br><span class="line"><span class="comment">Pick a starting point.</span></span><br><span class="line"><span class="comment">while(Problem is not solved)</span></span><br><span class="line"><span class="comment">    For each path from the starting point.</span></span><br><span class="line"><span class="comment">        check if selected path is safe, if yes select it</span></span><br><span class="line"><span class="comment">        and make recursive call to rest of the problem</span></span><br><span class="line"><span class="comment">        before which undo the current move.</span></span><br><span class="line"><span class="comment">    End For</span></span><br><span class="line"><span class="comment">If none of the move works out, return false, NO SOLUTON.</span></span><br><span class="line"><span class="comment"> * */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; subsets(<span class="keyword">int</span>[] nums) &#123;</span><br><span class="line">    List&lt;List&lt;Integer&gt;&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    Arrays.sort(nums);</span><br><span class="line">    backtrack(list, <span class="keyword">new</span> ArrayList&lt;&gt;(), nums, <span class="number">0</span>);</span><br><span class="line">    <span class="keyword">return</span> list;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">backtrack</span><span class="params">(List&lt;List&lt;Integer&gt;&gt; list , List&lt;Integer&gt; tempList, <span class="keyword">int</span> [] nums, <span class="keyword">int</span> start)</span></span>&#123;</span><br><span class="line">    list.add(<span class="keyword">new</span> ArrayList&lt;&gt;(tempList));</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = start; i &lt; nums.length; i++)&#123;</span><br><span class="line">        tempList.add(nums[i]);</span><br><span class="line">        backtrack(list, tempList, nums, i + <span class="number">1</span>);</span><br><span class="line">        tempList.remove(tempList.size() - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//input</span></span><br><span class="line">[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">//output</span></span><br><span class="line">[[],[<span class="number">1</span>],[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">1</span>,<span class="number">3</span>],[<span class="number">2</span>],[<span class="number">2</span>,<span class="number">3</span>],[<span class="number">3</span>]]</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>Algorithm</category>
         <category>Leetcode</category>
@@ -1307,35 +1377,6 @@ Given input matrix =
       </tags>
   </entry>
   <entry>
-    <title>[Leetcode] 55. Jump game</title>
-    <url>/2020/09/06/leetcode-55-jump-game/</url>
-    <content><![CDATA[<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p>Given an array of non-negative integers, you are initially positioned at the first index of the array.</p>
-<p>Each element in the array represents your maximum jump length at that position.</p>
-<p>Determine if you are able to reach the last index.</p>
-<h2 id="Example-1"><a href="#Example-1" class="headerlink" title="Example 1"></a>Example 1</h2><em>
-Input: nums = [2,3,1,1,4]
-Output: true
-Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.
-</em>
-<a id="more"></a>
-
-<h2 id="Example-2"><a href="#Example-2" class="headerlink" title="Example 2"></a>Example 2</h2><em>
-Input: nums = [3,2,1,0,4]
-Output: false
-Explanation: You will always arrive at index 3 no matter what. Its maximum jump length is 0, which makes it impossible to reach the last index.</em>
-
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * DP solution</span></span><br><span class="line"><span class="comment"> * with O(n^2) time complexity</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">canJump</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">      <span class="comment">//dp solution</span></span><br><span class="line">      <span class="keyword">int</span> n = nums.length;</span><br><span class="line">      <span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[n];</span><br><span class="line">      <span class="comment">//search from back of list;</span></span><br><span class="line">      <span class="comment">// use 0 represent the non-reachable and 1 represent reachable</span></span><br><span class="line">      <span class="comment">//2 3 1 1 4</span></span><br><span class="line">      <span class="comment">//0 0 0 0 1 # at begining</span></span><br><span class="line">      <span class="comment">//0 0 0 1 1 # 2nd dp[3 + 1] == 1 then change dp[3] to 1</span></span><br><span class="line">      <span class="comment">//0 0 1 1 1 # 3rd dp[2 + 1] = dp[3] == 1 then change dp[2] to 1;</span></span><br><span class="line">      <span class="comment">//0 1 1 1 1 # 4th dp[1 + 1] = dp[2] == 1 then change dp[1] to 1;</span></span><br><span class="line">      <span class="comment">//1 1 1 1 1 # 5th dp[0 + 1] = dp[1] == 1 then change dp[0] to 1;</span></span><br><span class="line">      <span class="comment">//so index 0 is able to reach the last index;</span></span><br><span class="line">      </span><br><span class="line">      <span class="comment">//case 2;</span></span><br><span class="line">      <span class="comment">//3 2 1 0 4</span></span><br><span class="line">      <span class="comment">//0 0 0 0 1 # at begining </span></span><br><span class="line">      <span class="comment">//0 0 0 0 1 # 2nd dp[3 + 0 (nums[3])] = 0, dp[3] = 0;</span></span><br><span class="line">      <span class="comment">//dp[2 + 1(nums[2])] = dp[3] = 0; dp[2] = 0;</span></span><br><span class="line">      <span class="comment">//dp[1 + 1] or dp[1 + 2] both equal to 0, so dp[1] = 0;</span></span><br><span class="line">      <span class="comment">//dp[0 + 1], dp[0 + 2] and dp[0 + 3] all equal to 0, so dp[0] = 0</span></span><br><span class="line">      <span class="comment">//which means in this example, cannot jump to last if we jump from index 0</span></span><br><span class="line">      <span class="comment">//initially</span></span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> i = n - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--)&#123;</span><br><span class="line">          dp[i] = (i == n-<span class="number">1</span>)? <span class="number">1</span>:<span class="number">0</span>;</span><br><span class="line">          <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= nums[i] &amp;&amp; i + j &lt; n; j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(dp[i + j] == <span class="number">1</span>)&#123;</span><br><span class="line">                dp[i] = <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">          <span class="keyword">return</span> dp[<span class="number">0</span>] == <span class="number">1</span>? <span class="keyword">true</span> : <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Greedy Solution</span></span><br><span class="line"><span class="comment"> * */</span></span><br><span class="line"> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">canJump</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//greedy solution</span></span><br><span class="line">        <span class="keyword">int</span> furthest = <span class="number">0</span>; </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(furthest &lt; i)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//find furthest position they can reach for each positions</span></span><br><span class="line">            furthest = Math.max(furthest, i + nums[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//Backtracking Solution</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">canJump</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//backtracking solution</span></span><br><span class="line">        <span class="keyword">return</span> canJumpFromPosition(<span class="number">0</span>, nums);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">canJumpFromPosition</span><span class="params">(<span class="keyword">int</span> position, <span class="keyword">int</span>[]nums)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(position == nums.length - <span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> furthestPosition = Math.min(nums.length - <span class="number">1</span>, position + nums[position]);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> nextPosition = position + <span class="number">1</span>; nextPosition &lt;= furthestPosition; nextPosition++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(canJumpFromPosition(nextPosition, nums))&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Algorithm</category>
-        <category>Leetcode</category>
-      </categories>
-      <tags>
-        <tag>backtracking</tag>
-        <tag>dp</tag>
-        <tag>greedy</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[Leetcode] 77. Combinations</title>
     <url>/2020/09/06/leetcode-77-combinations/</url>
     <content><![CDATA[<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p>Given two integers n and k, return all possible combinations of k numbers out of 1 … n.</p>
@@ -1349,24 +1390,6 @@ Output: [[1]]
 </em>
 
 <h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; combine(<span class="keyword">int</span> n, <span class="keyword">int</span> k) &#123;</span><br><span class="line">        List&lt;List&lt;Integer&gt;&gt; res = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">int</span>[] nums = <span class="keyword">new</span> <span class="keyword">int</span>[n];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">            nums[i] = i + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        backtrack(res, <span class="keyword">new</span> ArrayList&lt;&gt;(), nums, k, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">backtrack</span><span class="params">(List&lt;List&lt;Integer&gt;&gt; res, List&lt;Integer&gt; track, <span class="keyword">int</span>[] nums, <span class="keyword">int</span> k, <span class="keyword">int</span> index)</span></span>&#123;</span><br><span class="line">       <span class="keyword">if</span>(track.size() == k)&#123;</span><br><span class="line">           res.add(<span class="keyword">new</span> ArrayList&lt;&gt;(track));</span><br><span class="line">       &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = index; i &lt; nums.length; i++)&#123;</span><br><span class="line">          <span class="comment">//pick an option</span></span><br><span class="line">            track.add(nums[i]);</span><br><span class="line">            <span class="comment">//if size of track is less than k, keep tracking another path</span></span><br><span class="line">            <span class="keyword">if</span>(track.size() &lt;= k)&#123;</span><br><span class="line">                backtrack(res, track, nums, k, i + <span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">           </span><br><span class="line">           <span class="comment">//withdraw this option</span></span><br><span class="line">            track.remove(track.size() - <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Algorithm</category>
-        <category>Leetcode</category>
-      </categories>
-      <tags>
-        <tag>backtracking</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[Leetcode] 78. Subsets</title>
-    <url>/2020/09/06/leetcode-78-subsets/</url>
-    <content><![CDATA[<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p>Given a set of distinct integers, nums, return all possible subsets (the power set).</p>
-<p>Note: The solution set must not contain duplicate subsets.</p>
-<h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><p><em>Input: nums = [1,2,3]<br>Output:<br>[<br>  [3],<br>  [1],<br>  [2],<br>  [1,2,3],<br>  [1,3],<br>  [2,3],<br>  [1,2],<br>  []<br>]</em></p>
-<a id="more"></a>
-
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p><img src="/images/subsets.png"></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment">Backtracking can be solved always as follows:</span></span><br><span class="line"><span class="comment">Pick a starting point.</span></span><br><span class="line"><span class="comment">while(Problem is not solved)</span></span><br><span class="line"><span class="comment">    For each path from the starting point.</span></span><br><span class="line"><span class="comment">        check if selected path is safe, if yes select it</span></span><br><span class="line"><span class="comment">        and make recursive call to rest of the problem</span></span><br><span class="line"><span class="comment">        before which undo the current move.</span></span><br><span class="line"><span class="comment">    End For</span></span><br><span class="line"><span class="comment">If none of the move works out, return false, NO SOLUTON.</span></span><br><span class="line"><span class="comment"> * */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; subsets(<span class="keyword">int</span>[] nums) &#123;</span><br><span class="line">    List&lt;List&lt;Integer&gt;&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    Arrays.sort(nums);</span><br><span class="line">    backtrack(list, <span class="keyword">new</span> ArrayList&lt;&gt;(), nums, <span class="number">0</span>);</span><br><span class="line">    <span class="keyword">return</span> list;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">backtrack</span><span class="params">(List&lt;List&lt;Integer&gt;&gt; list , List&lt;Integer&gt; tempList, <span class="keyword">int</span> [] nums, <span class="keyword">int</span> start)</span></span>&#123;</span><br><span class="line">    list.add(<span class="keyword">new</span> ArrayList&lt;&gt;(tempList));</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = start; i &lt; nums.length; i++)&#123;</span><br><span class="line">        tempList.add(nums[i]);</span><br><span class="line">        backtrack(list, tempList, nums, i + <span class="number">1</span>);</span><br><span class="line">        tempList.remove(tempList.size() - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//input</span></span><br><span class="line">[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">//output</span></span><br><span class="line">[[],[<span class="number">1</span>],[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">1</span>,<span class="number">3</span>],[<span class="number">2</span>],[<span class="number">2</span>,<span class="number">3</span>],[<span class="number">3</span>]]</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>Algorithm</category>
         <category>Leetcode</category>
@@ -1400,6 +1423,28 @@ Given nums = [1,1,1,2,2,3],
       </tags>
   </entry>
   <entry>
+    <title>[Leetcode] 88. Merge Sorted Array</title>
+    <url>/2020/09/13/leetcode-88-merge-sorted-array/</url>
+    <content><![CDATA[<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p>Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.</p>
+<h3 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h3><ul>
+<li>The number of elements initialized in nums1 and nums2 are m and n respectively.</li>
+<li>You may assume that nums1 has enough space (size that is equal to m + n) to hold additional elements from nums2.</li>
+</ul>
+<h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><p>Input:<br>nums1 = [1,2,3,0,0,0], m = 3<br>nums2 = [2,5,6],       n = 3<br>Output: [1,2,2,3,5,6]</p>
+<a id="more"></a>
+
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span>[] nums1, <span class="keyword">int</span> m, <span class="keyword">int</span>[] nums2, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> end = m + n -<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> tail1 = m - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> tail2 = n - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(tail1 &gt;= <span class="number">0</span> &amp;&amp; tail2 &gt;= <span class="number">0</span>)&#123;</span><br><span class="line">            nums1[end--] = nums1[tail1] &lt; nums2[tail2] ? nums2[tail2--] : nums1[tail1--];</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span>(tail2 &gt;= <span class="number">0</span>)&#123;</span><br><span class="line">            nums1[end--] = nums2[tail2--];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Algorithm</category>
+        <category>Leetcode</category>
+      </categories>
+      <tags>
+        <tag>two pointer</tag>
+        <tag>array</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[Leetcode] 90. Subsets II</title>
     <url>/2020/09/06/leetcode-90-subset2/</url>
     <content><![CDATA[<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p>Given a collection of integers that might contain duplicates, nums, return all possible subsets (the power set).</p>
@@ -1427,28 +1472,6 @@ Output:
       </tags>
   </entry>
   <entry>
-    <title>[Leetcode] 88. Merge Sorted Array</title>
-    <url>/2020/09/13/leetcode-88-merge-sorted-array/</url>
-    <content><![CDATA[<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p>Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.</p>
-<h3 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h3><ul>
-<li>The number of elements initialized in nums1 and nums2 are m and n respectively.</li>
-<li>You may assume that nums1 has enough space (size that is equal to m + n) to hold additional elements from nums2.</li>
-</ul>
-<h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><p>Input:<br>nums1 = [1,2,3,0,0,0], m = 3<br>nums2 = [2,5,6],       n = 3<br>Output: [1,2,2,3,5,6]</p>
-<a id="more"></a>
-
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span>[] nums1, <span class="keyword">int</span> m, <span class="keyword">int</span>[] nums2, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> end = m + n -<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> tail1 = m - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> tail2 = n - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(tail1 &gt;= <span class="number">0</span> &amp;&amp; tail2 &gt;= <span class="number">0</span>)&#123;</span><br><span class="line">            nums1[end--] = nums1[tail1] &lt; nums2[tail2] ? nums2[tail2--] : nums1[tail1--];</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span>(tail2 &gt;= <span class="number">0</span>)&#123;</span><br><span class="line">            nums1[end--] = nums2[tail2--];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Algorithm</category>
-        <category>Leetcode</category>
-      </categories>
-      <tags>
-        <tag>two pointer</tag>
-        <tag>array</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[Leetcode] 92. Reverse Linked List II</title>
     <url>/2020/09/12/leetcode-92-reverse-linkedlist-2/</url>
     <content><![CDATA[<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p>Reverse a linked list from position m to n. Do it in one-pass.</p>
@@ -1468,7 +1491,7 @@ Output:
     <title>[Leetcode] 93. Restore IP Addresses</title>
     <url>/2020/09/19/leetcode-93-restore-ip-address/</url>
     <content><![CDATA[<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p>Given a string s containing only digits, return all possible valid IP addresses that can be obtained from s. You can return them in any order.</p>
-<p>A valid IP address consists of exactly four integers, each integer is between 0 and 255, separated by single dots and cannot have leading zeros. For example, “0.1.2.201” and “192.168.1.1” are valid IP addresses and “0.011.255.245”, “192.168.1.312” and “<a href="mailto:&#49;&#x39;&#x32;&#x2e;&#49;&#54;&#56;&#x40;&#x31;&#46;&#x31;">&#49;&#x39;&#x32;&#x2e;&#49;&#54;&#56;&#x40;&#x31;&#46;&#x31;</a>“ are invalid IP addresses. </p>
+<p>A valid IP address consists of exactly four integers, each integer is between 0 and 255, separated by single dots and cannot have leading zeros. For example, “0.1.2.201” and “192.168.1.1” are valid IP addresses and “0.011.255.245”, “192.168.1.312” and “<a href="mailto:&#x31;&#x39;&#x32;&#x2e;&#x31;&#54;&#x38;&#x40;&#x31;&#x2e;&#x31;">&#x31;&#x39;&#x32;&#x2e;&#x31;&#54;&#x38;&#x40;&#x31;&#x2e;&#x31;</a>“ are invalid IP addresses. </p>
 <h3 id="Example-1"><a href="#Example-1" class="headerlink" title="Example 1"></a>Example 1</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Input: s &#x3D; &quot;25525511135&quot;</span><br><span class="line">Output: [&quot;255.255.11.135&quot;,&quot;255.255.111.35&quot;]</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <h3 id="Example-2"><a href="#Example-2" class="headerlink" title="Example 2"></a>Example 2</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Input: s &#x3D; &quot;0000&quot;</span><br><span class="line">Output: [&quot;0.0.0.0&quot;]</span><br></pre></td></tr></table></figure>
